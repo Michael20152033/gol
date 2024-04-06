@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body class="body">
+
+    <div id="popupAuthIn" class="popup">
+
+        <div class="popup__wrap">
+
+
+            <i id="closePopup" class="popup__close">
+                <i class="icon icon--close"></i>
+            </i>
+            <div class="feedback-form__title popup-title title">
+                Оставить заявку
+            </div>
+            <form action="#" class="feedback-form__form">
+                <input class="feedback-form__input" placeholder="Имя" type="text" name="" id="">
+                <input class="feedback-form__input" placeholder="Телефон" type="tel" name="" id="">
+
+                <textarea class="feedback-form__input feedback-form__message" name="" placeholder="Сообщение" id="" cols="" rows=""></textarea>
+                <input id="myButton" type="submit" class="form_submit" value="Заказать проект" disabled="">
+            </form>
+
+        </div>
+    </div>
+    <div id="popupSucess" class="popup popup-sucess">
+
+        <div class="popup__wrap popup-sucess__wrap">
+
+
+            <i id="closePopup" class="popup__close">
+                <i class="icon icon--close"></i>
+            </i>
+
+
+
+            <div class="popup-sucess__icon icon icon--sucess"></div>
+            <div class="popup-sucess__title popup-title title">
+                Ваша заявка успешно отправлена!
+            </div>
+            <div class="popup-sucess__desc">
+                Скоро мы с вами свяжемся.
+            </div>
+            <a class="form_submit btn-close popup-sucess__btn btn">
+                Закрыть
+            </a>
+        </div>
+    </div>
+    <div id="popupError" class="popup popup-error">
+
+        <div class="popup__wrap popup-sucess__wrap">
+
+
+            <i id="closePopup" class="popup__close">
+                <i class="icon icon--close"></i>
+            </i>
+
+
+
+            <div class="popup-sucess__icon icon icon--error"></div>
+            <div class="popup-error__title popup-title title">
+                Что-то пошло не так. Попробуйте еще раз.
+            </div>
+
+
+            <div class="popup-flex">
+
+
+
+                <a class="btn-close popup-error__btn  popup-error__btn_style">
+                    Отменить 
+                </a>
+                <a class="form_submit  popup-error__btn btn-again btn">
+                   Повторить
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__wrap">
+                <a href="" class="header__logo logo">
+                    <img src="img/logo.svg" alt="" class="logo__image">
+                </a>
+                <div class="header_right">
+                    <nav class="header__nav nav">
+                        <ul class="header_menu">
+                            <li>
+                                <a href="#s2">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#s3">Кейсы</a>
+                            </li>
+                            <li>
+                                <a href="#s5">Создание NFT</a>
+                            </li>
+                            <li>
+                                <a href="#s6">Клиенты</a>
+                            </li>
+                            <li>
+                                <a href="#s7">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#s8">Уникальность</a>
+                            </li>
+                            <li>
+                                <a href="#s9">Команда</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="header_lang">
+                        <li>
+                            <a href="#">RU <span><svg width="11.000549" height="6.000732" viewBox="0 0 11.0005 6.00073" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M10.854 0.854004L5.854 5.854C5.80762 5.90063 5.75244 5.9375 5.69177 5.96265C5.63104 5.98779 5.56598 6.00073 5.50031 6.00073C5.43457 6.00073 5.36951 5.98779 5.30884 5.96265C5.24811 5.9375 5.19299 5.90063 5.14655 5.854L0.146545 0.854004C0.0527344 0.760254 0 0.633057 0 0.500244C0 0.367676 0.0527344 0.240234 0.146545 0.146484C0.240356 0.0527344 0.367615 0 0.500305 0C0.632935 0 0.760193 0.0527344 0.854004 0.146484L5.50031 4.79346L10.1465 0.146484C10.193 0.100098 10.2481 0.0632324 10.3088 0.0380859C10.3695 0.0129395 10.4346 0 10.5003 0C10.566 0 10.631 0.0129395 10.6917 0.0380859C10.7524 0.0632324 10.8076 0.100098 10.854 0.146484C10.9005 0.192871 10.9373 0.248047 10.9625 0.308838C10.9876 0.369629 11.0005 0.43457 11.0005 0.500244C11.0005 0.565918 10.9876 0.631104 10.9625 0.69165C10.9373 0.752441 10.9005 0.807617 10.854 0.854004Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span></a>
+                            <ul>
+                                <li>
+                                    <a href="#">EN</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="burger">
+                        <div class="burger_icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header__overlay header__overlay_z"></div>
+
+    <div class="mob_menu">
+
+        <div class="mob-menu">
+            <div class="mob-menu__top">
+                <div id="menu_mob" class="fix_menu">
+                    <ul>
+                        <li>
+                            <a href="#s2">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#s3">Кейсы</a>
+                        </li>
+                        <li>
+                            <a href="#s5">Создание NFT</a>
+                        </li>
+                        <li>
+                            <a href="#s6">Клиенты</a>
+                        </li>
+                        <li>
+                            <a href="#s7">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#s8">Уникальность</a>
+                        </li>
+                        <li>
+                            <a href="#s9">Команда</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="mob-menu__soc">
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--linkdin"></span>
+                    </a>
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--vk"></span>
+                    </a>
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--youtube"></span>
+                    </a>
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--tg"></span>
+                    </a>
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--tel"></span>
+                    </a>
+
+                </div>
+            </div>
+
+
+
+            <div class="mob-menu__copy">
+                © 2023 Goldapp. All rights reserved.
+            </div>
+        </div>
+
+
+
+    </div>
+    <main class="main">
+
+        <div class="project">
+            <div class="project__container wrapper">
+
+                <div class="project__top project-top">
+                    <div class="project__title project-top__title title">
+                        Cryptoestate - online monopoly
+                    </div>
+
+                    <div class="project-top__description">Browser games and games for social network</div>
+
+                    <a href="https://cryptoestate.goldapp.ru/" class="project-top__link">
+                        https://cryptoestate.goldapp.ru/
+                    </a>
+                </div>
+
+
+
+
+                <img src="img/preview.png" alt="" class="project-top__preview">
+
+                <div class="project-info">
+                    <div class="project-info__block">
+                        <div class="project-info__title">
+                            Challenge
+                        </div>
+
+                        <div class="project-info__text">
+                            <p>
+                                It was decided to develop the game for PC and smartphone browsers in order to reach the maximum number of users, without forcing them to install the game on a device as an application.
+                            </p>
+                            <p>
+                                The TRON blockchain was chosen for the development of a game token to minimize the transfer fees between wallets.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-info__block">
+                        <div class="project-info__title">
+                            Solution
+                        </div>
+
+                        <div class="project-info__text">
+                            <p>
+                                It was necessary to develop an online "Monopoly" game with the ability to play with cryptocurrency, win and withdraw the earned funds. It was also necessary to develop a custom game token
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="project-info__block">
+                        <div class="project-info__title">
+                            Impact
+                        </div>
+
+                        <div class="project-info__text">
+                            <p>
+                                As a result, the "Cryptoestate" browser game was developed with its own CRES token (TRON blockchain). Integration with etherapi.net and tronapi.net. The ability to play with a bot or other players. The ability to follow the game as a spectator. Referral
+                                system. Educational game. Cryptolotery. </p>
+                            <p>
+
+                                Conducting tournaments and obtaining titles. Automated withdrawal of user earned cryptocurrency.
+                            </p>
+                            <p>
+
+                                Admin dashboard for tournament creation, withdrawal confirmations, and moderation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="project-slider">
+
+                    <div class="project-slider__wrap">
+
+                        <div class="project-slider__item">
+                            <img src="img/pr-1.png" alt="">
+                        </div>
+                        <div class="project-slider__item">
+                            <img src="img/pr-1.png" alt="">
+                        </div>
+                        <div class="project-slider__item">
+                            <img src="img/pr-1.png" alt="">
+                        </div>
+                        <div class="project-slider__item">
+                            <img src="img/pr-1.png" alt="">
+                        </div>
+
+                    </div>
+
+
+                    <div class="slid-navig">
+                        <div class="slick-slider-dots pr-dots">
+                            <div class="team-arrows__left pr-left arrows-left">
+                                <span class="icon icon--arrleft"></span>
+                            </div>
+                            <div class="team-arrows__right pr-right arrows-right">
+                                <span class="icon icon--arrright"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+                <div class="project-next">
+                    <div class="project-next__title title">
+                        Следующие кейсы
+                    </div>
+
+                    <div class="project-next__line">
+
+                        <div class="tab_product box project-next__item" style=" ">
+                            <div class="tab_product_img ">
+                                <div class="screen_img ">
+                                    <img src="img/s3_1.png " alt="image ">
+                                </div>
+                            </div>
+                            <div class="tab_product_hover ">
+                                <div class="tab_product_btn ">
+                                    <a href="project-inn.html ">
+                                        <span>Подробнее</span>
+                                        <span>
+                                                <svg width="15.000488 " height="12.500488 " viewBox="0 0 15.0005 12.5005 " fill="none " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink "><defs></defs><path id="Vector
+                            " d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664
+                            6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055
+                            0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843
+                            6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z " fill="#1B1B1A " fill-opacity="1.000000 " fill-rule="nonzero "></path></svg>
+                                            </span>
+                                    </a>
+                                </div>
+                                <div class="tab_product_row ">
+                                    <div class="tab_product_content ">
+                                        <p>AR/VR проекты</p>
+                                        <p>Step app lockdrop platform</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="project-next__name ">
+                                Название
+                            </div>
+                        </div>
+                        <div class="tab_product box project-next__item" style=" ">
+                            <div class="tab_product_img ">
+                                <div class="screen_img ">
+                                    <img src="img/s3_1.png " alt="image ">
+                                </div>
+                            </div>
+                            <div class="tab_product_hover ">
+                                <div class="tab_product_btn ">
+                                    <a href="project-inn.html ">
+                                        <span>Подробнее</span>
+                                        <span>
+                                                <svg width="15.000488 " height="12.500488 " viewBox="0 0 15.0005 12.5005 " fill="none " xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink "><defs></defs><path id="Vector
+                            " d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664
+                            6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055
+                            0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843
+                            6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z " fill="#1B1B1A " fill-opacity="1.000000 " fill-rule="nonzero "></path></svg>
+                                            </span>
+                                    </a>
+                                </div>
+                                <div class="tab_product_row ">
+                                    <div class="tab_product_content ">
+                                        <p>AR/VR проекты</p>
+                                        <p>Step app lockdrop platform</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="project-next__name ">
+                                Название
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="feedback-form ">
+            <div class="form_img_left ">
+                <img src="img/f_left.png " alt="image ">
+            </div>
+            <div class="form_img_right ">
+                <img src="img/f_right.png " alt="image ">
+            </div>
+            <div class="feedback-form__container container ">
+
+
+                <div class="feedback-form__wrap ">
+                    <div class="feedback-form__title title ">
+                        Обратная связь
+                    </div>
+
+                    <form action="#" class="feedback-form__form">
+                        <input class="feedback-form__input feedback-form__input_two" placeholder="Имя" type="text" name="" id="">
+                        <input class="feedback-form__input feedback-form__input_two" placeholder="Телефон" type="tel" name="" id="">
+
+                        <textarea class="feedback-form__input feedback-form__message" name="" placeholder="Сообщение" id="" cols="" rows=""></textarea>
+                        <input id="myButton2" type="submit" class="form_submit" value="Заказать проект" disabled>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer class="footer ">
+        <div class="footer__container container ">
+            <div class="footer__wrap ">
+                <div class="footer__top ">
+
+                    <div class="footer__left ">
+                        <a href=" " class="footer__logo footer-logo ">
+                            <img src="img/footer-logo.svg " alt=" " class="footer-logo__img ">
+                        </a>
+
+                    </div>
+                    <div class="footer__right ">
+
+
+
+                        <a href="tel:+79529774752 " class="footer__block ">
+
+                            <span class="footer__icon icon icon--tel "></span>
+
+                            <span>
+                                +7 952 977 47 52
+                            </span>
+
+                        </a>
+                        <a href="https://t.me/goldappru " class="footer__block ">
+
+                            <span class="footer__icon icon icon--tg "></span>
+
+                            <span>
+                                @goldappru
+                            </span>
+
+                        </a>
+                        <div class="f_social ">
+                            <a href=" " class="footer__block ">
+                                <span class="footer__icon icon icon--linkdin "></span>
+                            </a>
+                            <a href=" " class="footer__block ">
+                                <span class="footer__icon icon icon--vk "></span>
+                            </a>
+                            <a href=" " class="footer__block ">
+                                <span class="footer__icon icon icon--youtube "></span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="footer__bottom ">
+
+                    <div class="footer__secut ">
+                        © 2023 Goldapp. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-2.2.0.min.js "></script>
+    <script src="js/slick.min.js "></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
+    <script src="js/js.min.js "></script>
+</body>
+
+
+</html>

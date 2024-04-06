@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body class="body">
+
+    <div id="popupAuthIn" class="popup">
+
+        <div class="popup__wrap">
+
+
+            <i id="closePopup" class="popup__close">
+                <i class="icon icon--close"></i>
+            </i>
+            <div class="feedback-form__title popup-title title">
+                Оставить заявку
+            </div>
+            <form action="#" class="feedback-form__form">
+                <input class="feedback-form__input" placeholder="Имя" type="text" name="" id="">
+                <input class="feedback-form__input feedback-form__input_one" placeholder="Телефон" type="tel" name="" id="">
+
+                <textarea class="feedback-form__input feedback-form__message" name="" placeholder="Сообщение" id="" cols="" rows=""></textarea>
+                <input id="myButton" type="submit" class="form_submit" value="Заказать проект" disabled="">
+            </form>
+
+        </div>
+    </div>
+    <div id="popupSucess" class="popup popup-sucess">
+
+        <div class="popup__wrap popup-sucess__wrap">
+
+
+            <i id="closePopup" class="popup__close">
+                <i class="icon icon--close"></i>
+            </i>
+
+
+
+            <div class="popup-sucess__icon icon icon--sucess"></div>
+            <div class="popup-sucess__title popup-title title">
+                Ваша заявка успешно отправлена!
+            </div>
+            <div class="popup-sucess__desc">
+                Скоро мы с вами свяжемся.
+            </div>
+            <a class="form_submit btn-close popup-sucess__btn btn">
+                Закрыть
+            </a>
+        </div>
+    </div>
+    <div id="popupError" class="popup popup-error">
+
+        <div class="popup__wrap popup-sucess__wrap">
+
+
+            <i id="closePopup" class="popup__close">
+                <i class="icon icon--close"></i>
+            </i>
+
+
+
+            <div class="popup-sucess__icon icon icon--error"></div>
+            <div class="popup-error__title popup-title title">
+                Что-то пошло не так. Попробуйте еще раз.
+            </div>
+
+
+            <div class="popup-flex">
+
+
+
+                <a class="btn-close popup-error__btn  popup-error__btn_style">
+                    Отменить 
+                </a>
+                <a class="form_submit  popup-error__btn btn-again btn">
+                   Повторить
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__wrap">
+                <a href="" class="header__logo logo">
+                    <img src="img/logo.svg" alt="" class="logo__image">
+                </a>
+                <div class="header_right">
+                    <nav class="header__nav nav">
+                        <ul class="header_menu">
+                            <li>
+                                <a href="#s2">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#s3">Кейсы</a>
+                            </li>
+                            <li>
+                                <a href="#s5">Создание NFT</a>
+                            </li>
+                            <li>
+                                <a href="#s6">Клиенты</a>
+                            </li>
+                            <li>
+                                <a href="#s7">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#s8">Уникальность</a>
+                            </li>
+                            <li>
+                                <a href="#s9">Команда</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="header_lang">
+                        <li>
+                            <a href="#">RU <span><svg width="11.000549" height="6.000732" viewBox="0 0 11.0005 6.00073" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><path id="Vector" d="M10.854 0.854004L5.854 5.854C5.80762 5.90063 5.75244 5.9375 5.69177 5.96265C5.63104 5.98779 5.56598 6.00073 5.50031 6.00073C5.43457 6.00073 5.36951 5.98779 5.30884 5.96265C5.24811 5.9375 5.19299 5.90063 5.14655 5.854L0.146545 0.854004C0.0527344 0.760254 0 0.633057 0 0.500244C0 0.367676 0.0527344 0.240234 0.146545 0.146484C0.240356 0.0527344 0.367615 0 0.500305 0C0.632935 0 0.760193 0.0527344 0.854004 0.146484L5.50031 4.79346L10.1465 0.146484C10.193 0.100098 10.2481 0.0632324 10.3088 0.0380859C10.3695 0.0129395 10.4346 0 10.5003 0C10.566 0 10.631 0.0129395 10.6917 0.0380859C10.7524 0.0632324 10.8076 0.100098 10.854 0.146484C10.9005 0.192871 10.9373 0.248047 10.9625 0.308838C10.9876 0.369629 11.0005 0.43457 11.0005 0.500244C11.0005 0.565918 10.9876 0.631104 10.9625 0.69165C10.9373 0.752441 10.9005 0.807617 10.854 0.854004Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"></path></svg></span></a>
+                            <ul>
+                                <li>
+                                    <a href="#">EN</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="burger">
+                        <div class="burger_icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header__overlay header__overlay_z"></div>
+
+    <div class="mob_menu">
+
+        <div class="mob-menu">
+            <div class="mob-menu__top">
+                <div id="menu_mob" class="fix_menu">
+                    <ul>
+                        <li>
+                            <a href="#s2">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#s3">Кейсы</a>
+                        </li>
+                        <li>
+                            <a href="#s5">Создание NFT</a>
+                        </li>
+                        <li>
+                            <a href="#s6">Клиенты</a>
+                        </li>
+                        <li>
+                            <a href="#s7">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#s8">Уникальность</a>
+                        </li>
+                        <li>
+                            <a href="#s9">Команда</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="mob-menu__soc">
+                    <a href="tel:+79529774752" class="mob-menu__soclink">
+                        <span class="icon icon--linkdin"></span>
+                    </a>
+                    <a href="https://t.me/goldappru" class="mob-menu__soclink">
+                        <span class="icon icon--vk"></span>
+                    </a>
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--youtube"></span>
+                    </a>
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--tg"></span>
+                    </a>
+                    <a href="" class="mob-menu__soclink">
+                        <span class="icon icon--tel"></span>
+                    </a>
+
+                </div>
+            </div>
+
+
+
+            <div class="mob-menu__copy">
+                © 2023 Goldapp. All rights reserved.
+            </div>
+        </div>
+
+
+
+    </div>
+    <main class="main">
+        <div class="s1_wrap">
+            <div class="s1_wrap_left">
+                <div class="s1">
+                    <div class="wrapper">
+                        <div class="s1_content">
+                            <h1>Реализуем <span>cтартап идеи</span> в продукты</h1>
+                            <div class="s1_btn">
+                                <a href="#" class="btn pop-order">Заказать проект</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s1_wrap_image_mob">
+                    <img src="img/s2_mob.png" alt="image">
+                </div>
+                <div class="s2" id="s2">
+                    <div class="wrapper">
+                        <div class="s2_content">
+                            <h2>О нас</h2>
+                            <div class="s2_desc content">
+                                <p>Компания GoldApp работает на рынке IT разработки с 2011 года. Каждый член команды, независимо от его должности, имеет опыт создания различных веб-проектов под ключ. Поэтому мы прекрасно разбираемся в наиболее перспективных
+                                    направлениях разработки IT проектов.</p>
+                                <p>Нашим первым направлением в разработке были приложения для социальных сетей. Мы можем разработать для Вас любое приложение для социальных сетей, в том числе приложение для сообщества.</p>
+                            </div>
+                            <div class="s2_items">
+                                <div class="s2_item">
+                                    <div class="s2_item_title">140+</div>
+                                    <div class="s2_item_desc">Проектов</div>
+                                </div>
+                                <div class="s2_item">
+                                    <div class="s2_item_title">2к</div>
+                                    <div class="s2_item_desc">Участников</div>
+                                </div>
+                                <div class="s2_item">
+                                    <div class="s2_item_title">184</div>
+                                    <div class="s2_item_desc">Заказов</div>
+                                </div>
+                                <div class="s2_item">
+                                    <div class="s2_item_title">1 млн</div>
+                                    <div class="s2_item_desc">Оценок</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s1_wrap_right">
+                <img src="img/s1_img.png" alt="image">
+            </div>
+        </div>
+        <div class="s3" id="s3">
+            <div class="wrapper">
+                <h2>Наши работы</h2>
+                <div class="s3_tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item active">
+                            <a class="nav-link" data-toggle="tab" href="#tab1">
+                                    Все проекты
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab2">
+                                    AR/VR проекты
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab3">
+                                    Соц. сети
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab4">
+                                    Крипто-проекты
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab5">
+                                    Мобильные приложения
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab6">
+                                    Web игры
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tab7">
+                                    Высоконагруженные сайты
+                                </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-pane fade show active">
+                            <div class="tab_products">
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_1.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="project-inn.html">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_2.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="project-inn.html">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_3.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="project-inn.html">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_4.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="project-inn.html">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_5.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_6.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_4.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_5.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_btns">
+                                <div class="tab_more">
+                                    <span>Больше проектов</span>
+                                    <span><svg width="13.750696" height="7.500977" viewBox="0 0 13.7507 7.50098" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M13.5675 1.06738L7.31754 7.31738C7.25949 7.37549 7.19056 7.42188 7.11469 7.45312C7.03881 7.48486 6.95748 7.50098 6.87535 7.50098C6.79321 7.50098 6.71188 7.48486 6.63601 7.45312C6.56013 7.42188 6.49121 7.37549 6.43316 7.31738L0.183161 1.06738C0.0658836 0.950195 0 0.791016 0 0.625488C0 0.459473 0.0658836 0.300293 0.183161 0.183105C0.300436 0.065918 0.459496 0 0.625347 0C0.791201 0 0.95026 0.065918 1.06754 0.183105L6.87535 5.9917L12.6832 0.183105C12.7412 0.125 12.8102 0.0791016 12.886 0.0473633C12.9619 0.0161133 13.0432 0 13.1253 0C13.2075 0 13.2888 0.0161133 13.3647 0.0473633C13.4405 0.0791016 13.5095 0.125 13.5675 0.183105C13.6256 0.241211 13.6717 0.310059 13.7031 0.38623C13.7345 0.461914 13.7507 0.543457 13.7507 0.625488C13.7507 0.70752 13.7345 0.788574 13.7031 0.864746C13.6717 0.94043 13.6256 1.00928 13.5675 1.06738Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span>
+                                </div>
+                                <div class="tab_popup">
+                                    <a href="#" class="btn pop-order">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab2" class="tab-pane fade">
+                            <div class="tab_products">
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_2.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_btns">
+                                <div class="tab_more">
+                                    <span>Больше проектов</span>
+                                    <span><svg width="13.750696" height="7.500977" viewBox="0 0 13.7507 7.50098" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M13.5675 1.06738L7.31754 7.31738C7.25949 7.37549 7.19056 7.42188 7.11469 7.45312C7.03881 7.48486 6.95748 7.50098 6.87535 7.50098C6.79321 7.50098 6.71188 7.48486 6.63601 7.45312C6.56013 7.42188 6.49121 7.37549 6.43316 7.31738L0.183161 1.06738C0.0658836 0.950195 0 0.791016 0 0.625488C0 0.459473 0.0658836 0.300293 0.183161 0.183105C0.300436 0.065918 0.459496 0 0.625347 0C0.791201 0 0.95026 0.065918 1.06754 0.183105L6.87535 5.9917L12.6832 0.183105C12.7412 0.125 12.8102 0.0791016 12.886 0.0473633C12.9619 0.0161133 13.0432 0 13.1253 0C13.2075 0 13.2888 0.0161133 13.3647 0.0473633C13.4405 0.0791016 13.5095 0.125 13.5675 0.183105C13.6256 0.241211 13.6717 0.310059 13.7031 0.38623C13.7345 0.461914 13.7507 0.543457 13.7507 0.625488C13.7507 0.70752 13.7345 0.788574 13.7031 0.864746C13.6717 0.94043 13.6256 1.00928 13.5675 1.06738Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span>
+                                </div>
+                                <div class="tab_popup">
+                                    <a href="#" class="btn pop-order">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab3" class="tab-pane fade">
+                            <div class="tab_products">
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_3.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_btns">
+                                <div class="tab_more">
+                                    <span>Больше проектов</span>
+                                    <span><svg width="13.750696" height="7.500977" viewBox="0 0 13.7507 7.50098" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M13.5675 1.06738L7.31754 7.31738C7.25949 7.37549 7.19056 7.42188 7.11469 7.45312C7.03881 7.48486 6.95748 7.50098 6.87535 7.50098C6.79321 7.50098 6.71188 7.48486 6.63601 7.45312C6.56013 7.42188 6.49121 7.37549 6.43316 7.31738L0.183161 1.06738C0.0658836 0.950195 0 0.791016 0 0.625488C0 0.459473 0.0658836 0.300293 0.183161 0.183105C0.300436 0.065918 0.459496 0 0.625347 0C0.791201 0 0.95026 0.065918 1.06754 0.183105L6.87535 5.9917L12.6832 0.183105C12.7412 0.125 12.8102 0.0791016 12.886 0.0473633C12.9619 0.0161133 13.0432 0 13.1253 0C13.2075 0 13.2888 0.0161133 13.3647 0.0473633C13.4405 0.0791016 13.5095 0.125 13.5675 0.183105C13.6256 0.241211 13.6717 0.310059 13.7031 0.38623C13.7345 0.461914 13.7507 0.543457 13.7507 0.625488C13.7507 0.70752 13.7345 0.788574 13.7031 0.864746C13.6717 0.94043 13.6256 1.00928 13.5675 1.06738Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span>
+                                </div>
+                                <div class="tab_popup">
+                                    <a href="#" class="btn pop-order">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab-pane fade">
+                            <div class="tab_products">
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_4.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_btns">
+                                <div class="tab_more">
+                                    <span>Больше проектов</span>
+                                    <span><svg width="13.750696" height="7.500977" viewBox="0 0 13.7507 7.50098" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M13.5675 1.06738L7.31754 7.31738C7.25949 7.37549 7.19056 7.42188 7.11469 7.45312C7.03881 7.48486 6.95748 7.50098 6.87535 7.50098C6.79321 7.50098 6.71188 7.48486 6.63601 7.45312C6.56013 7.42188 6.49121 7.37549 6.43316 7.31738L0.183161 1.06738C0.0658836 0.950195 0 0.791016 0 0.625488C0 0.459473 0.0658836 0.300293 0.183161 0.183105C0.300436 0.065918 0.459496 0 0.625347 0C0.791201 0 0.95026 0.065918 1.06754 0.183105L6.87535 5.9917L12.6832 0.183105C12.7412 0.125 12.8102 0.0791016 12.886 0.0473633C12.9619 0.0161133 13.0432 0 13.1253 0C13.2075 0 13.2888 0.0161133 13.3647 0.0473633C13.4405 0.0791016 13.5095 0.125 13.5675 0.183105C13.6256 0.241211 13.6717 0.310059 13.7031 0.38623C13.7345 0.461914 13.7507 0.543457 13.7507 0.625488C13.7507 0.70752 13.7345 0.788574 13.7031 0.864746C13.6717 0.94043 13.6256 1.00928 13.5675 1.06738Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span>
+                                </div>
+                                <div class="tab_popup">
+                                    <a href="#" class="btn pop-order">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab5" class="tab-pane fade">
+                            <div class="tab_products">
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_5.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_btns">
+                                <div class="tab_more">
+                                    <span>Больше проектов</span>
+                                    <span><svg width="13.750696" height="7.500977" viewBox="0 0 13.7507 7.50098" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M13.5675 1.06738L7.31754 7.31738C7.25949 7.37549 7.19056 7.42188 7.11469 7.45312C7.03881 7.48486 6.95748 7.50098 6.87535 7.50098C6.79321 7.50098 6.71188 7.48486 6.63601 7.45312C6.56013 7.42188 6.49121 7.37549 6.43316 7.31738L0.183161 1.06738C0.0658836 0.950195 0 0.791016 0 0.625488C0 0.459473 0.0658836 0.300293 0.183161 0.183105C0.300436 0.065918 0.459496 0 0.625347 0C0.791201 0 0.95026 0.065918 1.06754 0.183105L6.87535 5.9917L12.6832 0.183105C12.7412 0.125 12.8102 0.0791016 12.886 0.0473633C12.9619 0.0161133 13.0432 0 13.1253 0C13.2075 0 13.2888 0.0161133 13.3647 0.0473633C13.4405 0.0791016 13.5095 0.125 13.5675 0.183105C13.6256 0.241211 13.6717 0.310059 13.7031 0.38623C13.7345 0.461914 13.7507 0.543457 13.7507 0.625488C13.7507 0.70752 13.7345 0.788574 13.7031 0.864746C13.6717 0.94043 13.6256 1.00928 13.5675 1.06738Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span>
+                                </div>
+                                <div class="tab_popup">
+                                    <a href="#" class="btn pop-order">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab6" class="tab-pane fade">
+                            <div class="tab_products">
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_6.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_btns">
+                                <div class="tab_more">
+                                    <span>Больше проектов</span>
+                                    <span><svg width="13.750696" height="7.500977" viewBox="0 0 13.7507 7.50098" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M13.5675 1.06738L7.31754 7.31738C7.25949 7.37549 7.19056 7.42188 7.11469 7.45312C7.03881 7.48486 6.95748 7.50098 6.87535 7.50098C6.79321 7.50098 6.71188 7.48486 6.63601 7.45312C6.56013 7.42188 6.49121 7.37549 6.43316 7.31738L0.183161 1.06738C0.0658836 0.950195 0 0.791016 0 0.625488C0 0.459473 0.0658836 0.300293 0.183161 0.183105C0.300436 0.065918 0.459496 0 0.625347 0C0.791201 0 0.95026 0.065918 1.06754 0.183105L6.87535 5.9917L12.6832 0.183105C12.7412 0.125 12.8102 0.0791016 12.886 0.0473633C12.9619 0.0161133 13.0432 0 13.1253 0C13.2075 0 13.2888 0.0161133 13.3647 0.0473633C13.4405 0.0791016 13.5095 0.125 13.5675 0.183105C13.6256 0.241211 13.6717 0.310059 13.7031 0.38623C13.7345 0.461914 13.7507 0.543457 13.7507 0.625488C13.7507 0.70752 13.7345 0.788574 13.7031 0.864746C13.6717 0.94043 13.6256 1.00928 13.5675 1.06738Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span>
+                                </div>
+                                <div class="tab_popup">
+                                    <a href="#" class="btn pop-order">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab7" class="tab-pane fade">
+                            <div class="tab_products">
+                                <div class="tab_product box">
+                                    <div class="tab_product_img">
+                                        <div class="screen_img">
+                                            <img src="img/s3_6.png" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="tab_product_hover">
+                                        <div class="tab_product_btn">
+                                            <a href="#">
+                                                <span>Подробнее</span>
+                                                <span>
+                                                        <svg width="15.000488" height="12.500488" viewBox="0 0 15.0005 12.5005" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M14.8172 6.69238L9.1922 12.3174C9.07492 12.4346 8.91586 12.5005 8.75 12.5005C8.58414 12.5005 8.42508 12.4346 8.3078 12.3174C8.19055 12.2002 8.12466 12.041 8.12466 11.8755C8.12466 11.7095 8.19055 11.5503 8.3078 11.4331L12.8664 6.87549L0.625 6.87549C0.459229 6.87549 0.300262 6.80957 0.183044 6.69238C0.0658569 6.5752 0 6.41602 0 6.25049C0 6.08447 0.0658569 5.92578 0.183044 5.80859C0.300262 5.69141 0.459229 5.62549 0.625 5.62549L12.8664 5.62549L8.3078 1.06738C8.19055 0.950195 8.12466 0.791016 8.12466 0.625488C8.12466 0.459473 8.19055 0.300293 8.3078 0.183105C8.42508 0.065918 8.58414 0 8.75 0C8.91586 0 9.07492 0.065918 9.1922 0.183105L14.8172 5.80811C14.8753 5.86621 14.9214 5.93506 14.9529 6.01123C14.9843 6.08691 15.0005 6.16846 15.0005 6.25049C15.0005 6.33252 14.9843 6.41357 14.9529 6.48975C14.9214 6.56543 14.8753 6.63428 14.8172 6.69238Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg>
+                                                    </span>
+                                            </a>
+                                        </div>
+                                        <div class="tab_product_row">
+                                            <div class="tab_product_content">
+                                                <p>AR/VR проекты</p>
+                                                <p>Step app lockdrop platform</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_btns">
+                                <div class="tab_more">
+                                    <span>Больше проектов</span>
+                                    <span><svg width="13.750696" height="7.500977" viewBox="0 0 13.7507 7.50098" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="Vector" d="M13.5675 1.06738L7.31754 7.31738C7.25949 7.37549 7.19056 7.42188 7.11469 7.45312C7.03881 7.48486 6.95748 7.50098 6.87535 7.50098C6.79321 7.50098 6.71188 7.48486 6.63601 7.45312C6.56013 7.42188 6.49121 7.37549 6.43316 7.31738L0.183161 1.06738C0.0658836 0.950195 0 0.791016 0 0.625488C0 0.459473 0.0658836 0.300293 0.183161 0.183105C0.300436 0.065918 0.459496 0 0.625347 0C0.791201 0 0.95026 0.065918 1.06754 0.183105L6.87535 5.9917L12.6832 0.183105C12.7412 0.125 12.8102 0.0791016 12.886 0.0473633C12.9619 0.0161133 13.0432 0 13.1253 0C13.2075 0 13.2888 0.0161133 13.3647 0.0473633C13.4405 0.0791016 13.5095 0.125 13.5675 0.183105C13.6256 0.241211 13.6717 0.310059 13.7031 0.38623C13.7345 0.461914 13.7507 0.543457 13.7507 0.625488C13.7507 0.70752 13.7345 0.788574 13.7031 0.864746C13.6717 0.94043 13.6256 1.00928 13.5675 1.06738Z" fill="#1B1B1A" fill-opacity="1.000000" fill-rule="nonzero"/></svg></span>
+                                </div>
+                                <div class="tab_popup">
+                                    <a href="#" class="btn pop-order">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="awards">
+
+            <div class="awards__container container">
+
+
+
+                <div class="awards__wrap">
+
+                    <div class="awards__title title">
+                        Награды
+                    </div>
+
+
+
+                    <div class="awards__list">
+                        <img src="img/arward-1.svg" alt="" class="awards__item">
+                        <img src="img/arward-2.svg" alt="" class="awards__item">
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <section class="marketing" id="s5">
+            <div class="marketing__container container">
+                <div class="marketing__wrap">
+                    <div class="marketing__title title">
+                        Маркетинг и создание нфт
+                    </div>
+                    <div class="marketing__inner">
+                        <div class="marketing__item marketing-item marketing-item_another">
+                            <div class="marketing-item__content">
+                                <h4 class="marketing-item__title marketing-item__title_another">
+                                    Какой-то условный заголовок
+                                </h4>
+                                <p class="marketing-item__text marketing-item__text_another">
+                                    Примерно 1,5 месяца сотрудничаем со спортивным брендом Андрея Скоромного - DROP IT в формате комплексной интеграции инструментов, контента с выходом в WEB 3.0 истории
+                                </p>
+                                <div class="marketing-item__statistics statistiсs">
+                                    <div class="statistics__list">
+                                        <div class="statistics__item">
+                                            <div class="statistics__item-amount">
+                                                193k+
+                                            </div>
+                                            <p class="statistics__item-text">
+                                                Подписчиков
+                                            </p>
+                                        </div>
+                                        <div class="statistics__item">
+                                            <div class="statistics__item-amount">
+                                                1000+
+                                            </div>
+                                            <p class="statistics__item-text">
+                                                Проектов
+                                            </p>
+                                        </div>
+                                        <div class="statistics__item">
+                                            <div class="statistics__item-amount">
+                                                301
+                                            </div>
+                                            <p class="statistics__item-text">
+                                                Клиентов
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <img class="marketing-item__img marketing-item__main" src="img/marketing-1.png" alt="images">
+                            </div>
+                        </div>
+                        <div class="marketing__list">
+                            <div class="marketing__item marketing-item">
+                                <div class="marketing-item__content">
+                                    <img class="marketing-item__img" src="img/marketing-2.png" alt="images">
+                                    <h4 class="marketing-item__title">
+                                        AR & VR
+                                    </h4>
+                                    <p class="marketing-item__text">
+                                        Описание пункта номер один
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="marketing__item marketing-item">
+                                <div class="marketing-item__content">
+                                    <img class="marketing-item__img" src="img/marketing-3.png" alt="images">
+                                    <h4 class="marketing-item__title">
+                                        Motion graphics
+                                    </h4>
+                                    <p class="marketing-item__text">
+                                        Описание пункта номер один
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="marketing__item marketing-item">
+                                <div class="marketing-item__content">
+                                    <img class="marketing-item__img" src="img/marketing-4.png" alt="images">
+                                    <h4 class="marketing-item__title">
+                                        Web 3.0 / NFT
+                                    </h4>
+                                    <p class="marketing-item__text">
+                                        Описание пункта номер один
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="marketing__item marketing-item">
+                                <div class="marketing-item__content">
+                                    <img class="marketing-item__img" src="img/marketing-5.png" alt="images">
+                                    <h4 class="marketing-item__title">
+                                        3D-дизайн
+                                    </h4>
+                                    <p class="marketing-item__text">
+                                        Описание пункта номер один
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="marketing__item marketing-item">
+                                <div class="marketing-item__content">
+                                    <img class="marketing-item__img" src="img/marketing-6.png" alt="images">
+                                    <h4 class="marketing-item__title">
+                                        2D-дизайн
+                                    </h4>
+                                    <p class="marketing-item__text">
+                                        Описание пункта номер один
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="marketing__item marketing-item">
+                                <div class="marketing-item__content">
+                                    <img class="marketing-item__img" src="img/marketing-7.png" alt="images">
+                                    <h4 class="marketing-item__title">
+                                        Бренд одежды
+                                    </h4>
+                                    <p class="marketing-item__text">
+                                        Описание пункта номер один
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our-partners" id="s6">
+            <h3 class="our-partners__title title">
+                Наши клиенты
+            </h3>
+            <div class="partners_slider">
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+                <div class="partners_slider_item_wr">
+                    <div class="partner_slider_item">
+                        <img src="img/our-partners-image.svg" alt="logo">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <div class="s7" id="s7">
+            <div class="wrapper">
+                <h2>Отзывы</h2>
+                <div class="s7_slider">
+                    <div class="s7_slider_item_wr">
+                        <div class="s7_slider_item">
+                            <div class="s7_slider_item_left">
+                                <div class="screen_img">
+                                    <img src="img/s7_bg.png" alt="image">
+                                </div>
+
+                                <div class="s7_slider_item_content">
+                                    <img src="img/s7_logo.png" alt="logo">
+                                </div>
+                            </div>
+                            <div class="s7_slider_item_right">
+                                <div class="s7_slider_item_right_q">
+                                    <svg width="120.071426" height="99.571289" viewBox="0 0 120.071 99.5713" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="“" d="M48.5901 0L51.6134 19.292C49.3099 20.9517 46.8624 24.5815 44.2709 30.1826C41.8234 35.7837 40.3837 41.9028 39.9518 48.541L54.6368 51.9639L54.6368 99.5713L0 99.5713L0 70.6333C0 51.5488 3.81522 35.6797 11.4457 23.0259C19.2201 10.3721 31.6015 2.69678 48.5901 0ZM114.025 0L117.048 19.292C114.745 20.9517 112.297 24.5815 109.706 30.1826C107.258 35.7837 105.818 41.9028 105.386 48.541L120.071 51.9639L120.071 99.5713L65.4346 99.5713L65.4346 70.6333C65.4346 51.5488 69.2498 35.6797 76.8803 23.0259C84.6547 10.3721 97.0361 2.69678 114.025 0Z" fill="#EDEDED" fill-opacity="1.000000" fill-rule="evenodd"/></svg>
+                                </div>
+                                <div class="s7_slider_item_title">
+                                    Lefren
+                                </div>
+                                <div class="s7_slider_item_desc">
+                                    Однозначно рекомендуем команду Goldapp для работы в проектах. Они доказали, что сложные, интересные и масштабные задачи, которые помогают решать актуальные вопросы - это их поле деятельности.
+                                </div>
+                                <div class="s7_slider_item_sertificate">
+                                    <a href="img/s7_logo.png" data-fancybox="gallery1">
+                                        <span>Сертификат</span>
+                                    </a>
+
+
+                                    <a href="" class="">
+
+
+                                        <span>Сайт заказчика</span>
+                                        <span class="icon icon--site">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s7_slider_item_wr">
+                        <div class="s7_slider_item">
+                            <div class="s7_slider_item_left">
+                                <div class="screen_img">
+                                    <img src="img/s7_bg.png" alt="image">
+                                </div>
+
+                                <div class="s7_slider_item_content">
+                                    <img src="img/s7_logo.png" alt="logo">
+                                </div>
+                            </div>
+                            <div class="s7_slider_item_right">
+                                <div class="s7_slider_item_right_q">
+                                    <svg width="120.071426" height="99.571289" viewBox="0 0 120.071 99.5713" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="“" d="M48.5901 0L51.6134 19.292C49.3099 20.9517 46.8624 24.5815 44.2709 30.1826C41.8234 35.7837 40.3837 41.9028 39.9518 48.541L54.6368 51.9639L54.6368 99.5713L0 99.5713L0 70.6333C0 51.5488 3.81522 35.6797 11.4457 23.0259C19.2201 10.3721 31.6015 2.69678 48.5901 0ZM114.025 0L117.048 19.292C114.745 20.9517 112.297 24.5815 109.706 30.1826C107.258 35.7837 105.818 41.9028 105.386 48.541L120.071 51.9639L120.071 99.5713L65.4346 99.5713L65.4346 70.6333C65.4346 51.5488 69.2498 35.6797 76.8803 23.0259C84.6547 10.3721 97.0361 2.69678 114.025 0Z" fill="#EDEDED" fill-opacity="1.000000" fill-rule="evenodd"/></svg>
+                                </div>
+                                <div class="s7_slider_item_title">
+                                    Lefren
+                                </div>
+                                <div class="s7_slider_item_desc">
+                                    Однозначно рекомендуем команду Goldapp для работы в проектах. Они доказали, что сложные, интересные и масштабные задачи, которые помогают решать актуальные вопросы - это их поле деятельности.
+                                </div>
+                                <div class="s7_slider_item_sertificate">
+                                    <a href="img/s7_logo.png" data-fancybox="gallery1">
+                                        <span>Сертификат</span>
+                                    </a>
+
+
+                                    <a href="" class="">
+
+
+                                        <span>Сайт заказчика</span>
+                                        <span class="icon icon--site">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s7_slider_item_wr">
+                        <div class="s7_slider_item">
+                            <div class="s7_slider_item_left">
+                                <div class="screen_img">
+                                    <img src="img/s7_bg.png" alt="image">
+                                </div>
+
+                                <div class="s7_slider_item_content">
+                                    <img src="img/s7_logo.png" alt="logo">
+                                </div>
+                            </div>
+                            <div class="s7_slider_item_right">
+                                <div class="s7_slider_item_right_q">
+                                    <svg width="120.071426" height="99.571289" viewBox="0 0 120.071 99.5713" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><path id="“" d="M48.5901 0L51.6134 19.292C49.3099 20.9517 46.8624 24.5815 44.2709 30.1826C41.8234 35.7837 40.3837 41.9028 39.9518 48.541L54.6368 51.9639L54.6368 99.5713L0 99.5713L0 70.6333C0 51.5488 3.81522 35.6797 11.4457 23.0259C19.2201 10.3721 31.6015 2.69678 48.5901 0ZM114.025 0L117.048 19.292C114.745 20.9517 112.297 24.5815 109.706 30.1826C107.258 35.7837 105.818 41.9028 105.386 48.541L120.071 51.9639L120.071 99.5713L65.4346 99.5713L65.4346 70.6333C65.4346 51.5488 69.2498 35.6797 76.8803 23.0259C84.6547 10.3721 97.0361 2.69678 114.025 0Z" fill="#EDEDED" fill-opacity="1.000000" fill-rule="evenodd"/></svg>
+                                </div>
+                                <div class="s7_slider_item_title">
+                                    Lefren
+                                </div>
+                                <div class="s7_slider_item_desc">
+                                    Однозначно рекомендуем команду Goldapp для работы в проектах. Они доказали, что сложные, интересные и масштабные задачи, которые помогают решать актуальные вопросы - это их поле деятельности.
+                                </div>
+                                <div class="s7_slider_item_sertificate">
+                                    <a href="img/s7_logo.png" data-fancybox="gallery1">
+                                        <span>Сертификат</span>
+                                    </a>
+
+
+                                    <a href="#" class="">
+
+
+                                        <span>Сайт заказчика</span>
+                                        <span class="icon icon--site">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slid-navig">
+
+
+                    <div class="slick-slider-dots s7-dots">
+
+
+                        <div class="team-arrows__left s7-left arrows-left">
+                            <span class="icon icon--arrleft"></span>
+                        </div>
+                        <div class="team-arrows__right s7-right arrows-right">
+                            <span class="icon icon--arrright"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="advantages" id="s8">
+            <div class="advantages__container container">
+                <div class="advantages__wrap">
+                    <div class="advantages__title title">
+                        Почему мы?
+                    </div>
+                    <div class="advantages__list">
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/adv-1.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Богатый опыт
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                С богатым опытом на рынке IT с 2011 года, мы предоставляем проверенные и актуальные решения разработки.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_2.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Техпонимание
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Вся команда владеет техническим пониманием IT разработки, нет непрофессиональных менеджеров.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_3.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Разработка
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Активно разрабатываем, рекомендуем исходя из опыта, исследуем, аргументируем, предлагаем решения.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_4.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Экономия
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Экономим на аренде офиса и питании, команда удаленная, расходы на проекты уменьшены вдвое.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_5.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Оптимизация и тесты
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Сосредотачиваемся на оптимизации и тестировании, автоматизируя и ручным методом.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_6.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Гибридный подход
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Практикуем гибридный подход: консервативные решения и новые технологии в разработке.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__list_mob">
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/adv-1.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Богатый опыт
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                С богатым опытом на рынке IT с 2011 года, мы предоставляем проверенные и актуальные решения разработки.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_2.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Техпонимание
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Вся команда владеет техническим пониманием IT разработки, нет непрофессиональных менеджеров.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_3.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Разработка
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Активно разрабатываем, рекомендуем исходя из опыта, исследуем, аргументируем, предлагаем решения.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_4.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Экономия
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Экономим на аренде офиса и питании, команда удаленная, расходы на проекты уменьшены вдвое.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_5.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Оптимизация и тесты
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Сосредотачиваемся на оптимизации и тестировании, автоматизируя и ручным методом.
+                            </div>
+                        </div>
+                        <div class="advantages__item advantages-item">
+                            <div class="advantages-item__title">
+                                <img src="img/s7_6.png" alt="" class="advantages-item__icon">
+                                <span>
+                                    Гибридный подход
+                                </span>
+                            </div>
+
+                            <div class="advantages-item__text">
+                                Практикуем гибридный подход: консервативные решения и новые технологии в разработке.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="slid-navig advantages-navig">
+
+
+                        <div class="slick-slider-dots adv-dots">
+
+
+                            <div class="team-arrows__left adv-left arrows-left">
+                                <span class="icon icon--arrleft"></span>
+                            </div>
+                            <div class="team-arrows__right adv-right arrows-right">
+                                <span class="icon icon--arrright"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages_btn">
+                        <a href="" class="pop-order advantages__button btn">
+                            <span>
+                                Заказать проект
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team" id="s9">
+            <div class="wrapper">
+                <h2>Команда</h2>
+
+
+                <div class="team_slider">
+                    <div class="team_slider_item_wr">
+                        <div class="team_slider_item">
+                            <div class="team_slider_item_img">
+                                <div class="screen_img">
+                                    <img src="img/s8_1.png" alt="photo">
+                                </div>
+                            </div>
+                            <div class="team_slider_item_title">
+                                Игорь
+                            </div>
+                            <div class="team_slider_item_desc">
+                                Руководитель Binance хакатон, CEO IMPS Kingdom, CTO SeedLaunch, CTO TonBanking
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team_slider_item_wr">
+                        <div class="team_slider_item">
+                            <div class="team_slider_item_img">
+                                <div class="screen_img">
+                                    <img src="img/s8_2.png" alt="photo">
+                                </div>
+                            </div>
+                            <div class="team_slider_item_title">
+                                Владимир
+                            </div>
+                            <div class="team_slider_item_desc">
+                                Fullstack разработчик
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team_slider_item_wr">
+                        <div class="team_slider_item">
+                            <div class="team_slider_item_img">
+                                <div class="screen_img">
+                                    <img src="img/s8_3.png" alt="photo">
+                                </div>
+                            </div>
+                            <div class="team_slider_item_title">
+                                Павел
+                            </div>
+                            <div class="team_slider_item_desc">
+                                Fullstack разработчик
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team_slider_item_wr">
+                        <div class="team_slider_item">
+                            <div class="team_slider_item_img">
+                                <div class="screen_img">
+                                    <img src="img/s8_4.png" alt="photo">
+                                </div>
+                            </div>
+                            <div class="team_slider_item_title">
+                                Игорь
+                            </div>
+                            <div class="team_slider_item_desc">
+                                Разработчик мобильных приложений
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team_slider_item_wr">
+                        <div class="team_slider_item">
+                            <div class="team_slider_item_img">
+                                <div class="screen_img">
+                                    <img src="img/s8_5.png" alt="photo">
+                                </div>
+                            </div>
+                            <div class="team_slider_item_title">
+                                Егор
+                            </div>
+                            <div class="team_slider_item_desc">
+                                Fullstack разработчик
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team_slider_item_wr">
+                        <div class="team_slider_item">
+                            <div class="team_slider_item_img">
+                                <div class="screen_img">
+                                    <img src="img/s8_2.png" alt="photo">
+                                </div>
+                            </div>
+                            <div class="team_slider_item_title">
+                                Владимир
+                            </div>
+                            <div class="team_slider_item_desc">
+                                Fullstack разработчик
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="slid-navig">
+
+
+                    <div class="slick-slider-dots team-dots">
+
+
+                        <div class="team-arrows__left team-left arrows-left">
+                            <span class="icon icon--arrleft"></span>
+                        </div>
+                        <div class="team-arrows__right team-right arrows-right">
+                            <span class="icon icon--arrright"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="feedback-form">
+            <div class="form_img_left">
+                <img src="img/f_left.png" alt="image">
+            </div>
+            <div class="form_img_right">
+                <img src="img/f_right.png" alt="image">
+            </div>
+            <div class="feedback-form__container container">
+
+
+                <div class="feedback-form__wrap">
+                    <div class="feedback-form__title title">
+                        Обратная связь
+                    </div>
+
+                    <form action="#" class="feedback-form__form">
+                        <input class="feedback-form__input" placeholder="Имя" type="text" name="" id="">
+                        <input class="feedback-form__input feedback-form__input_two" placeholder="Телефон" type="tel" name="" id="">
+
+                        <textarea class="feedback-form__input feedback-form__message" name="" placeholder="Сообщение" id="" cols="" rows=""></textarea>
+                        <input id="myButton2" type="submit" class="form_submit" value="Заказать проект" disabled>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__wrap">
+                <div class="footer__top">
+
+                    <div class="footer__left">
+                        <a href="" class="footer__logo footer-logo">
+                            <img src="img/footer-logo.svg" alt="" class="footer-logo__img">
+                        </a>
+
+                    </div>
+                    <div class="footer__right">
+
+
+
+                        <a href="tel:+79529774752" class="footer__block">
+
+                            <span class="footer__icon icon icon--tel"></span>
+
+                            <span>
+                                +7 952 977 47 52
+                            </span>
+
+                        </a>
+                        <a href="https://t.me/goldappru" class="footer__block">
+
+                            <span class="footer__icon icon icon--tg"></span>
+
+                            <span>
+                                @goldappru
+                            </span>
+
+                        </a>
+                        <div class="f_social">
+                            <a href="" class="footer__block">
+                                <span class="footer__icon icon icon--linkdin"></span>
+                            </a>
+                            <a href="" class="footer__block">
+                                <span class="footer__icon icon icon--vk"></span>
+                            </a>
+                            <a href="" class="footer__block">
+                                <span class="footer__icon icon icon--youtube"></span>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="footer__bottom">
+
+                    <div class="footer__secut">
+                        © 2023 Goldapp. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="js/jquery-2.2.0.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/js.min.js"></script>
+</body>
+
+
+</html>
